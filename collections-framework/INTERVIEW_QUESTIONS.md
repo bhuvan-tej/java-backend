@@ -89,7 +89,7 @@
 **Q7. In a high-throughput microservice, you need a shared in-memory counter per endpoint. How would you implement it correctly?**
 
 > Use `ConcurrentHashMap` with `AtomicInteger` values:
-> ```java
+> ```
 > ConcurrentHashMap<String, AtomicInteger> counters = new ConcurrentHashMap<>();
 >
 > // Thread-safe increment — computeIfAbsent + incrementAndGet are both atomic
@@ -97,7 +97,7 @@
 >         .incrementAndGet();
 > ```
 > Alternatively, use `merge()`:
-> ```java
+> ```
 > counters.merge(endpoint, 1, Integer::sum);
 > ```
 > Do NOT use `counters.put(key, counters.get(key) + 1)` — classic read-modify-write race condition even with `ConcurrentHashMap` because the get and put are two separate operations.
@@ -119,7 +119,7 @@
 **Q9. When would `ArrayList` perform worse than `LinkedList` in practice? Give a concrete scenario.**
 
 > When you are building a text editor or a stream processor that **only inserts and removes at the head** of a very large list. For example:
-> ```java
+> ```
 > // Simulating a log buffer — oldest entries removed from front
 > list.remove(0);  // O(n) for ArrayList — shifts all elements left
 >                  // O(1) for LinkedList/ArrayDeque — just move head pointer
@@ -154,7 +154,7 @@
 > Fail-fast iterators track an internal `modCount` on the collection. On each `next()` call, the iterator checks if `modCount` has changed since iteration started. If yes → `ConcurrentModificationException`.
 >
 > Common production scenario: a service that filters and removes elements from a list while iterating in a for-each loop. Fix:
-> ```java
+> ```
 > // Before fix — CME in production
 > for (Session s : activeSessions) {
 >     if (s.isExpired()) activeSessions.remove(s);
@@ -176,7 +176,7 @@
 **Q12. TreeMap vs HashMap — you need to find all users who registered between two dates. Which do you use and why?**
 
 > `TreeMap<LocalDate, List<User>>` — keys are dates, naturally sorted.
-> ```java
+> ```
 > TreeMap<LocalDate, List<User>> registrations = new TreeMap<>();
 >
 > // O(log n) range query — returns a view of all entries between the dates
@@ -199,7 +199,7 @@
 > - The ordering is context-specific (ascending in one screen, descending in another)
 >
 > Production example — a report service that sorts the same `Order` list differently based on user preference:
-> ```java
+> ```
 > Map<String, Comparator<Order>> sortStrategies = new HashMap<>();
 > sortStrategies.put("date",   Comparator.comparing(Order::getDate).reversed());
 > sortStrategies.put("amount", Comparator.comparingDouble(Order::getAmount).reversed());
@@ -229,22 +229,22 @@
 > All four avoid the non-atomic `get()` → check → `put()` pattern:
 >
 > `computeIfAbsent(key, mappingFn)` — only called if key is absent. Returns existing value if present, otherwise calls the function and stores result. Use for lazy initialisation:
-> ```java
+> ```
 > map.computeIfAbsent("orders", k -> new ArrayList<>()).add(order);
 > ```
 >
 > `computeIfPresent(key, remappingFn)` — only called if key exists. If function returns null, key is removed. Use for conditional updates:
-> ```java
+> ```
 > map.computeIfPresent("stock", (k, qty) -> qty > 1 ? qty - 1 : null);
 > ```
 >
 > `compute(key, remappingFn)` — always called, whether key exists or not. Null return removes the key. Use for atomic read-modify-write:
-> ```java
+> ```
 > map.compute("count", (k, v) -> v == null ? 1 : v + 1);
 > ```
 >
 > `merge(key, value, mergeFn)` — if key absent → store value; if present → apply function to old and new value. Cleanest for aggregation:
-> ```java
+> ```
 > map.merge(word, 1, Integer::sum);  // frequency counter
 > ```
 >
