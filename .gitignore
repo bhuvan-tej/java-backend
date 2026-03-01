@@ -1,0 +1,23 @@
+# Maven build output
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven wrapper — not needed
+mvnw
+mvnw.cmd
+.mvn/
+
+# IntelliJ/Spring generated files
+HELP.md
+.gitattributes
+**/application.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Ignore module-level gitignore files
+collections-framework/**/.gitignore
