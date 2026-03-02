@@ -1,9 +1,8 @@
 # 🎯 Interview Questions — Lists
-### Targeted at 5 Years of Java Experience
 
 ---
 
-> At 5 years experience, interviewers expect you to go beyond "ArrayList uses
+> As you get experience, interviewers expect you to go beyond "ArrayList uses
 > an array internally". They want to hear about resize mechanics, production
 > bugs you have debugged, design tradeoffs, and real-world scenarios.
 

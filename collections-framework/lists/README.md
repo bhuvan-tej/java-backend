@@ -2,7 +2,7 @@
 
 > Covers `ArrayList` and `LinkedList` — the two most commonly used
 > List implementations in Java. Each class has a foundational example
-> and a senior-level real-world example.
+> and a adv-level real-world example.
 
 ---
 
@@ -11,7 +11,7 @@
 ```
 ArrayList                              LinkedList
 ───────────────────────────────        ──────────────────────────────────
-[ 0 ][ 1 ][ 2 ][ 3 ][ 4 ][ 5 ]       [A] ⟷ [B] ⟷ [C] ⟷ [D] ⟷ [E]
+[ 0 ][ 1 ][ 2 ][ 3 ][ 4 ][ 5 ]         [A] ⟷ [B] ⟷ [C] ⟷ [D] ⟷ [E]
 
 Backed by Object[]                     Doubly-linked nodes
 Contiguous memory (cache friendly)     Scattered heap nodes
@@ -25,10 +25,10 @@ Bad for:   insert/delete in middle     Bad for:   random access by index
 
 ### `ArrayListSamples.java`
 
-| Example | What it covers |
-|---------|----------------|
+| Example      | What it covers |
+|--------------|----------------|
 | Foundational | Student waitlist — add, get, set, remove, contains, subList, sort |
-| Senior Level | E-commerce orders — pre-sizing, removeIf, Comparator chaining, Stream partitioning, ListIterator, unmodifiableList, trimToSize |
+| Adv Level    | E-commerce orders — pre-sizing, removeIf, Comparator chaining, Stream partitioning, ListIterator, unmodifiableList, trimToSize |
 
 **Key methods:**
 ```
@@ -62,10 +62,10 @@ Collections.unmodifiableList()   // read-only wrapper — defensive programming
 
 ### `LinkedListSamples.java`
 
-| Example | What it covers |
-|---------|----------------|
+| Example      | What it covers |
+|--------------|----------------|
 | Foundational | Browser history (Stack) + Print queue (Queue) |
-| Senior Level | Text editor Undo/Redo — two-stack pattern with O(1) ops at both ends |
+| Adv Level    | Text editor Undo/Redo — two-stack pattern with O(1) ops at both ends |
 
 **Key methods:**
 ```

@@ -1,10 +1,9 @@
 # 🎯 Interview Questions — Collections Framework
-### Targeted at 5 Years of Java Experience
 
 ---
 
 > These questions go beyond syntax and basic definitions.
-> At 5 years experience, interviewers expect you to explain internals,
+> As we gain experience, interviewers expect you to explain internals,
 > justify design decisions, discuss tradeoffs, and relate answers to
 > production scenarios you have actually dealt with.
 
