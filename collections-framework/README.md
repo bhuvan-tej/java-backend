@@ -70,6 +70,7 @@ Need KEY-VALUE pairs?
 collections-framework/
 │
 ├── lists/              ArrayList · LinkedList
+├── set/                HashSet · LinkedHashSet · TreeSet
 ```
 
 Each module contains:
@@ -89,6 +90,9 @@ Each module contains:
 |---|--------|-------|-------------|
 | 1 | lists | `ArrayListSamples` | Dynamic array, O(1) access, removeIf |
 | 2 | lists | `LinkedListSamples` | Undo/Redo with two-stack pattern |
+| 3 | set | `HashSetSamples` | hashCode + equals contract |
+| 4 | set | `LinkedHashSetSamples` | Insertion-order deduplication |
+| 5 | set | `TreeSetSamples` | floor/ceiling/range queries |
 
 ---
 
@@ -98,3 +102,6 @@ Each module contains:
 |------------|-----|-----|--------|----------|----------|
 | ArrayList | O(1) | O(1)* | O(n) | O(n) | By index |
 | LinkedList | O(n) | O(1)† | O(1)† | O(n) | By index |
+| HashSet | — | O(1) | O(1) | O(1) | No |
+| LinkedHashSet | — | O(1) | O(1) | O(1) | Insertion |
+| TreeSet | — | O(log n) | O(log n) | O(log n) | Sorted |
