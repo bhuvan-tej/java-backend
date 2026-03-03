@@ -71,6 +71,7 @@ collections-framework/
 │
 ├── lists/              ArrayList · LinkedList
 ├── set/                HashSet · LinkedHashSet · TreeSet
+├── map/                HashMap · LinkedHashMap · TreeMap · ConcurrentHashMap
 ```
 
 Each module contains:
@@ -93,6 +94,10 @@ Each module contains:
 | 3 | set | `HashSetSamples` | hashCode + equals contract |
 | 4 | set | `LinkedHashSetSamples` | Insertion-order deduplication |
 | 5 | set | `TreeSetSamples` | floor/ceiling/range queries |
+| 6 | map | `HashMapSamples` | merge/compute/computeIfAbsent |
+| 7 | map | `LinkedHashMapSamples` | LRU Cache in 10 lines |
+| 8 | map | `TreeMapSamples` | Tax brackets, time-series log |
+| 9 | map | `ConcurrentHashMapSamples` | Thread-safe counters, CAS ops |
 
 ---
 
@@ -105,3 +110,9 @@ Each module contains:
 | HashSet | — | O(1) | O(1) | O(1) | No |
 | LinkedHashSet | — | O(1) | O(1) | O(1) | Insertion |
 | TreeSet | — | O(log n) | O(log n) | O(log n) | Sorted |
+| HashMap | O(1) | O(1) | O(1) | O(1) key | No |
+| LinkedHashMap | O(1) | O(1) | O(1) | O(1) key | Insertion |
+| TreeMap | O(log n) | O(log n) | O(log n) | O(log n) | Sorted |
+
+*Amortized — occasional resize is O(n)
+†At head/tail only
