@@ -72,6 +72,8 @@ collections-framework/
 ├── lists/              ArrayList · LinkedList
 ├── set/                HashSet · LinkedHashSet · TreeSet
 ├── map/                HashMap · LinkedHashMap · TreeMap · ConcurrentHashMap
+├── queue/              PriorityQueue · ArrayDeque
+├── comparable/         Comparable vs Comparator
 ```
 
 Each module contains:
@@ -98,6 +100,9 @@ Each module contains:
 | 7 | map | `LinkedHashMapSamples` | LRU Cache in 10 lines |
 | 8 | map | `TreeMapSamples` | Tax brackets, time-series log |
 | 9 | map | `ConcurrentHashMapSamples` | Thread-safe counters, CAS ops |
+| 10 | queue | `PriorityQueueSamples` | Top-K, merge K sorted arrays |
+| 11 | queue | `ArrayDequeSamples` | BFS/DFS, monotonic stack |
+| 12 | comparable | `ComparableVsComparatorSamples` | Chaining, null-safe sort |
 
 ---
 
@@ -113,6 +118,46 @@ Each module contains:
 | HashMap | O(1) | O(1) | O(1) | O(1) key | No |
 | LinkedHashMap | O(1) | O(1) | O(1) | O(1) key | Insertion |
 | TreeMap | O(log n) | O(log n) | O(log n) | O(log n) | Sorted |
+| PriorityQueue | O(1) peek | O(log n) | O(log n) | O(n) | Heap |
+| ArrayDeque | O(1) ends | O(1) ends | O(1) ends | O(n) | By index |
 
 *Amortized — occasional resize is O(n)
 †At head/tail only
+
+---
+
+## 🔑 Key Patterns at a Glance
+
+```
+// Frequency count — cleanest one-liner
+map.merge(word, 1, Integer::sum);
+
+// Group into lists — lazy initialise
+map.computeIfAbsent(key, k -> new ArrayList<>()).add(value);
+
+// Top-K largest — min-heap of size K
+PriorityQueue<Integer> topK = new PriorityQueue<>();
+for (int n : nums) {
+    topK.offer(n);
+    if (topK.size() > k) topK.poll();  // kick out smallest
+}
+
+// LRU Cache — 10 lines using LinkedHashMap
+class LRUCache<K,V> extends LinkedHashMap<K,V> {
+    private final int cap;
+    LRUCache(int cap) { super(16, 0.75f, true); this.cap = cap; }
+    protected boolean removeEldestEntry(Map.Entry e) { return size() > cap; }
+}
+
+// Safe removal — NEVER remove inside for-each
+list.removeIf(item -> condition);           // Java 8+ cleanest
+// OR
+Iterator<E> it = list.iterator();
+while (it.hasNext()) if (cond) it.remove();
+
+// Range / bracket lookup
+TreeMap<Integer, Double> brackets = ...;
+Integer bracket = brackets.floorKey(income);  // largest key ≤ income
+```
+
+---

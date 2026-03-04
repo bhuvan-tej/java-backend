@@ -70,7 +70,7 @@ ArrayDeque  │ O(1) e │ O(1) e │ O(1) e  │ O(n)     │ Ends
 ## 🎯 Interview Prep
 
 Each module has a dedicated `INTERVIEW_QUESTIONS.md` with questions
-**targeted at 5 years of Java experience** — not definitions, but deep
+**targeted as we gain Java experience** — not definitions, but deep
 internals, production tradeoffs, and design decisions.
 
 Topics covered:

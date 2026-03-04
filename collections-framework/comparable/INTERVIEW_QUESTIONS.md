@@ -93,7 +93,7 @@
 > ```
 > // Sort employees: department A-Z, then salary high-to-low, then name A-Z
 > Comparator<Employee> sort = Comparator
->     .comparing(Employee::getDept)                    // primary
+>     .comparing(Employee::getDept)                     // primary
 >     .thenComparingInt(Employee::getSalary).reversed() // secondary desc
 >     .thenComparing(Employee::getName);                // tertiary
 >

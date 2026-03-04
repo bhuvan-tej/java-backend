@@ -20,16 +20,17 @@ class Employee                         Comparator<Employee> bySalary =
   }                                    // Chain them
 }                                      Comparator<Employee> master =
                                          Comparator.comparing(Employee::getDept)
-One ordering. Baked in.                            .thenComparingInt(Employee::getSalary)
-Part of the class contract.                        .thenComparing(Employee::getName);
+                                                   .thenComparingInt(Employee::getSalary)
+                                                   .thenComparing(Employee::getName);
 
-Used by:                               Multiple orderings. External. Flexible.
-  Collections.sort(list)
-  new TreeSet<>()                      Used by:
-  new PriorityQueue<>()                  list.sort(comparator)
-  list.sort(null)                        new TreeSet<>(comparator)
-                                         new PriorityQueue<>(comparator)
-                                         stream.sorted(comparator)
+One ordering. Baked in.                Multiple orderings. External. Flexible.
+Part of the class contract.  
+
+Used by:                               Used by:
+  Collections.sort(list)                 list.sort(comparator)
+  new TreeSet<>()                        new TreeSet<>(comparator)
+  new PriorityQueue<>()                  new PriorityQueue<>(comparator)
+  list.sort(null)                        stream.sorted(comparator)
 ```
 
 ---
@@ -72,7 +73,7 @@ class Employee implements Comparable<Employee> {
 }
 
 // ── Comparator basics ──
-Comparator.comparingInt(Employee::getSalary)          // int field
+Comparator.comparingInt(Employee::getSalary)           // int field
 Comparator.comparingDouble(Product::getRating)         // double field
 Comparator.comparingLong(Event::getTimestamp)          // long field
 Comparator.comparing(Employee::getName)                // Comparable field
@@ -84,8 +85,8 @@ Comparator.nullsLast(comparator)                       // nulls sort after all
 
 // ── Chaining ──
 Comparator.comparing(Employee::getDept)                // primary
-          .thenComparingInt(Employee::getSalary)        // secondary
-          .thenComparing(Employee::getName)             // tertiary
+          .thenComparingInt(Employee::getSalary)       // secondary
+          .thenComparing(Employee::getName)            // tertiary
 
 // ── Natural / reverse natural ──
 Comparator.naturalOrder()                              // uses compareTo()
@@ -143,6 +144,3 @@ list.sort(Comparator.nullsLast(Comparator.comparing(Employee::getDept)));
 ```
 
 ---
-
-> 💡 See `INTERVIEW_QUESTIONS.md` for Comparable/Comparator Q&A
-> targeted at 5 years of experience.
