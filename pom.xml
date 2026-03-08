@@ -15,6 +15,7 @@
 
     <modules>
         <module>collections-framework</module>
+        <module>java-8</module>
     </modules>
 
     <properties>
