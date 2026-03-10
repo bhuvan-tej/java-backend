@@ -46,6 +46,22 @@ Each topic folder contains:
 
 ---
 
+## ⚡ Module 2 — Java 8 Features ✅
+
+```
+  java-8/
+  │
+  ├── 🔷 lambdas ──────────  Syntax · Captures · Closures · Strategy Pattern
+  ├── 🌊 streams ──────────  Basics · Intermediate · Terminal · Collectors · Numeric · Parallel · Advanced · Real World
+  ├── 🎁 optionals ────────  Creation · Retrieval · Chaining · Anti-patterns
+  ├── ⚙️ functional ───────  Predicate · Function · Consumer · Supplier · Method References · Composition
+  ├── ⚡  completablefuture ─  Async pipelines · thenApply · thenCompose · allOf · anyOf · Exception handling · Timeouts
+  ├── 📅 datetime ─────────  LocalDate · LocalDateTime · ZonedDateTime · Instant · Period · Duration · DateTimeFormatter
+  └── 🔧 defaultmethods ───  Default · Static · Diamond problem · Mixins
+```
+
+---
+
 ## 📊 Collections — Big-O at a Glance
 
 ```
@@ -73,23 +89,32 @@ Each module has a dedicated `INTERVIEW_QUESTIONS.md` with questions
 **targeted as we gain Java experience** — not definitions, but deep
 internals, production tradeoffs, and design decisions.
 
-Topics covered:
+**Collections topics:**
 - HashMap internals — treeification, load factor, power-of-2 capacity
 - ConcurrentHashMap vs synchronizedMap vs Hashtable
 - hashCode + equals contract and what breaks silently when violated
 - Fail-fast vs fail-safe — how `modCount` works under the hood
 - LRU Cache design · TimSort internals · Thread safety tradeoffs
-- NavigableMap range queries · Memory traps: subList(), trimToSize()
+
+**Java 8 topics:**
+- Lambda vs anonymous class at JVM level — invokedynamic, singleton non-capturing
+- Stream lazy evaluation — vertical processing, short-circuit optimisation
+- `thenApply` vs `thenCompose` — the flatMap parallel for CompletableFuture
+- `orElse` vs `orElseGet` — why eager evaluation is a hidden performance trap
+- Diamond problem resolution — `InterfaceName.super.method()` syntax
+- `DateTimeFormatter` thread safety vs `SimpleDateFormat`
+- Parallel stream pitfalls — commonPool starvation, shared mutable state
 
 ---
 
 ## 🛤️ Progress
 
-| Module | Status | Topics |
-|--------|--------|--------|
-| 📦 Collections Framework | 🚧 In Progress | Lists · Set · Map · Queue · Comparable · Iterator · Utils · Real World |
-| ⚡ Java 8 Features | 🔜 Next | Lambdas · Streams · Optionals · Method Refs · Functional Interfaces |
-| 🎨 Design Patterns | 📅 Planned | Creational · Structural · Behavioural with real Spring examples |
+| Module | Status | Topics                                                                 |
+|--------|--------|------------------------------------------------------------------------|
+| 📦 Collections Framework | ✅ Complete | Lists · Set · Map · Queue · Comparable · Iterator · Utils · Real World |
+| ⚡ Java 8 Features | ✅ Complete | Lambdas · Streams · Optionals · Method Refs · Functional Interfaces · CompletableFuture · DateTime · Default Methods |
+| 🔒 Java Concurrency | 🚧 In Progress | Threads · Locks · Executors · Concurrent Collections · Atomic · Fork/Join |
+| 🎨 Design Patterns | 📅 Planned | Creational · Structural · Behavioural with real Spring examples        |
 
 ---
 
