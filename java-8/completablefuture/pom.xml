@@ -5,21 +5,11 @@
 
     <parent>
         <groupId>com.javabackend</groupId>
-        <artifactId>java-backend</artifactId>
+        <artifactId>java-8</artifactId>
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>java-8</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>lambdas</module>
-        <module>streams</module>
-        <module>optionals</module>
-        <module>functional</module>
-        <module>completablefuture</module>
-        <module>datetime</module>
-        <module>defaultmethods</module>
-    </modules>
+    <artifactId>completablefuture</artifactId>
+    <name>Java 8 - Completable Future</name>
 
 </project>
