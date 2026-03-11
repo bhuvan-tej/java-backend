@@ -16,6 +16,7 @@
     <modules>
         <module>collections-framework</module>
         <module>java-8</module>
+        <module>concurrency</module>
     </modules>
 
     <properties>
