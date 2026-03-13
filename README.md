@@ -19,7 +19,7 @@ A **structured, multi-module Java learning repository** built for developers who
 
 ---
 
-## 📦 Module 1 — Collections Framework
+## 📦 Module 1 — Collections Framework ✅
 
 ```
   collections-framework/
@@ -32,16 +32,6 @@ A **structured, multi-module Java learning repository** built for developers who
   ├── 🔁 iterator ─────  Iterator · ListIterator · Fail-Fast · Fail-Safe
   ├── 🛠️  utils ─────────  java.util.Collections utility class
   └── 🌍 realworld ────  Word Frequency · Task Scheduler · Sliding Window Max
-```
-
-Each topic folder contains:
-```
-  <topic>/
-    ├── src/main/java/com/javabackend/collections/<topic>/
-    │       └── *Samples.java          ← runnable examples with main()
-    ├── README.md                      ← concept, mental model, methods, when to use
-    ├── INTERVIEW_QUESTIONS.md         ← Q&A targeted at 5 years experience
-    └── pom.xml
 ```
 
 ---
@@ -58,6 +48,33 @@ Each topic folder contains:
   ├── ⚡  completablefuture ─  Async pipelines · thenApply · thenCompose · allOf · anyOf · Exception handling · Timeouts
   ├── 📅 datetime ─────────  LocalDate · LocalDateTime · ZonedDateTime · Instant · Period · Duration · DateTimeFormatter
   └── 🔧 defaultmethods ───  Default · Static · Diamond problem · Mixins
+```
+
+---
+
+## 🔒 Module 3 — Concurrency ✅
+
+```
+  concurrency/
+  │
+  ├── 🧵 threads ──────────  Lifecycle · Daemon · join · sleep · interrupt · ThreadLocal
+  ├── 🔐 synchronization ──  synchronized · volatile · happens-before · wait/notify · Deadlock
+  ├── 🔑 locks ─────────────  ReentrantLock · tryLock · ReadWriteLock · StampedLock · Condition
+  ├── ⚙️  executors ─────────  ThreadPoolExecutor · Future · Callable · ScheduledExecutor · ForkJoin
+  ├── 🗂️  concurrent ────────  ConcurrentHashMap · CopyOnWriteArrayList · BlockingQueue
+  └── ⚛️  atomic ───────────  AtomicInteger · AtomicReference · CAS · ABA · LongAdder
+```
+
+---
+
+Each topic folder contains:
+```
+  <topic>/
+    ├── src/main/java/com/javabackend/<module>/<topic>/
+    │       └── *Samples.java          ← runnable examples with main()
+    ├── README.md                      ← concept, mental model, methods, when to use
+    ├── INTERVIEW_QUESTIONS.md         ← Q&A targeted at 5 years experience
+    └── pom.xml
 ```
 
 ---
@@ -89,22 +106,6 @@ Each module has a dedicated `INTERVIEW_QUESTIONS.md` with questions
 **targeted as we gain Java experience** — not definitions, but deep
 internals, production tradeoffs, and design decisions.
 
-**Collections topics:**
-- HashMap internals — treeification, load factor, power-of-2 capacity
-- ConcurrentHashMap vs synchronizedMap vs Hashtable
-- hashCode + equals contract and what breaks silently when violated
-- Fail-fast vs fail-safe — how `modCount` works under the hood
-- LRU Cache design · TimSort internals · Thread safety tradeoffs
-
-**Java 8 topics:**
-- Lambda vs anonymous class at JVM level — invokedynamic, singleton non-capturing
-- Stream lazy evaluation — vertical processing, short-circuit optimisation
-- `thenApply` vs `thenCompose` — the flatMap parallel for CompletableFuture
-- `orElse` vs `orElseGet` — why eager evaluation is a hidden performance trap
-- Diamond problem resolution — `InterfaceName.super.method()` syntax
-- `DateTimeFormatter` thread safety vs `SimpleDateFormat`
-- Parallel stream pitfalls — commonPool starvation, shared mutable state
-
 ---
 
 ## 🛤️ Progress
@@ -113,7 +114,8 @@ internals, production tradeoffs, and design decisions.
 |--------|--------|------------------------------------------------------------------------|
 | 📦 Collections Framework | ✅ Complete | Lists · Set · Map · Queue · Comparable · Iterator · Utils · Real World |
 | ⚡ Java 8 Features | ✅ Complete | Lambdas · Streams · Optionals · Method Refs · Functional Interfaces · CompletableFuture · DateTime · Default Methods |
-| 🔒 Java Concurrency | 🚧 In Progress | Threads · Locks · Executors · Concurrent Collections · Atomic · Fork/Join |
+| 🔒 Java Concurrency | ✅ Complete | Threads · Locks · Executors · Concurrent Collections · Atomic · Fork/Join |
+| ☕ Java Versions (9→21) | 🚧 In Progress | Java 9 · 10 · 11 · 12-14 · 15-16 · 17 · 21 |
 | 🎨 Design Patterns | 📅 Planned | Creational · Structural · Behavioural with real Spring examples        |
 
 ---
