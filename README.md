@@ -3,8 +3,8 @@
    ██║██╔══██╗██║   ██║██╔══██╗    ██╔══██╗██╔══██╗██╔════╝██║ ██╔╝██╔════╝████╗  ██║██╔══██╗
    ██║███████║██║   ██║███████║    ██████╔╝███████║██║     █████╔╝ █████╗  ██╔██╗ ██║██║  ██║
 ██ ██║██╔══██║╚██╗ ██╔╝██╔══██║    ██╔══██╗██╔══██║██║     ██╔═██╗ ██╔══╝  ██║╚██╗██║██║  ██║
-╚████╔╝██║  ██║ ╚████╔╝ ██║  ██║    ██████╔╝██║  ██║╚██████╗██║  ██╗███████╗██║ ╚████║██████╔╝
- ╚═══╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝╚═════╝
+╚████║██║  ██║ ╚████╔╝ ██║  ██║    ██████╔╝██║  ██║╚██████╗██║  ██╗███████╗██║ ╚████║██████╔╝
+ ╚═══╝╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝╚═════╝
 ```
 
 ## 🧭 What Is This?
@@ -24,14 +24,14 @@ A **structured, multi-module Java learning repository** built for developers who
 ```
   collections-framework/
   │
-  ├── 📋 lists ────────  ArrayList · LinkedList
-  ├── 🔵 set ──────────  HashSet · LinkedHashSet · TreeSet
+  ├── 📋 lists ─────────  ArrayList · LinkedList
+  ├── 🔵 set ───────────  HashSet · LinkedHashSet · TreeSet
   ├── 🗂️  map ──────────  HashMap · LinkedHashMap · TreeMap · ConcurrentHashMap
   ├── 📬 queue ─────────  PriorityQueue · ArrayDeque
   ├── ⚖️  comparable ───  Comparable vs Comparator
-  ├── 🔁 iterator ─────  Iterator · ListIterator · Fail-Fast · Fail-Safe
-  ├── 🛠️  utils ─────────  java.util.Collections utility class
-  └── 🌍 realworld ────  Word Frequency · Task Scheduler · Sliding Window Max
+  ├── 🔁 iterator ──────  Iterator · ListIterator · Fail-Fast · Fail-Safe
+  ├── 🛠️  utils ────────  java.util.Collections utility class
+  └── 🌍 realworld ─────  Word Frequency · Task Scheduler · Sliding Window Max
 ```
 
 ---
@@ -41,13 +41,13 @@ A **structured, multi-module Java learning repository** built for developers who
 ```
   java-8/
   │
-  ├── 🔷 lambdas ──────────  Syntax · Captures · Closures · Strategy Pattern
-  ├── 🌊 streams ──────────  Basics · Intermediate · Terminal · Collectors · Numeric · Parallel · Advanced · Real World
-  ├── 🎁 optionals ────────  Creation · Retrieval · Chaining · Anti-patterns
-  ├── ⚙️ functional ───────  Predicate · Function · Consumer · Supplier · Method References · Composition
+  ├── 🔷 lambdas ───────────  Syntax · Captures · Closures · Strategy Pattern
+  ├── 🌊 streams ───────────  Basics · Intermediate · Terminal · Collectors · Numeric · Parallel · Advanced · Real World
+  ├── 🎁 optionals ─────────  Creation · Retrieval · Chaining · Anti-patterns
+  ├── ⚙️ functional ────────  Predicate · Function · Consumer · Supplier · Method References · Composition
   ├── ⚡  completablefuture ─  Async pipelines · thenApply · thenCompose · allOf · anyOf · Exception handling · Timeouts
-  ├── 📅 datetime ─────────  LocalDate · LocalDateTime · ZonedDateTime · Instant · Period · Duration · DateTimeFormatter
-  └── 🔧 defaultmethods ───  Default · Static · Diamond problem · Mixins
+  ├── 📅 datetime ──────────  LocalDate · LocalDateTime · ZonedDateTime · Instant · Period · Duration · DateTimeFormatter
+  └── 🔧 defaultmethods ────  Default · Static · Diamond problem · Mixins
 ```
 
 ---
@@ -59,10 +59,10 @@ A **structured, multi-module Java learning repository** built for developers who
   │
   ├── 🧵 threads ──────────  Lifecycle · Daemon · join · sleep · interrupt · ThreadLocal
   ├── 🔐 synchronization ──  synchronized · volatile · happens-before · wait/notify · Deadlock
-  ├── 🔑 locks ─────────────  ReentrantLock · tryLock · ReadWriteLock · StampedLock · Condition
-  ├── ⚙️  executors ─────────  ThreadPoolExecutor · Future · Callable · ScheduledExecutor · ForkJoin
-  ├── 🗂️  concurrent ────────  ConcurrentHashMap · CopyOnWriteArrayList · BlockingQueue
-  └── ⚛️  atomic ───────────  AtomicInteger · AtomicReference · CAS · ABA · LongAdder
+  ├── 🔑 locks ────────────  ReentrantLock · tryLock · ReadWriteLock · StampedLock · Condition
+  ├── ⚙️  executors ───────  ThreadPoolExecutor · Future · Callable · ScheduledExecutor · ForkJoin
+  ├── 🗂️  concurrent ──────  ConcurrentHashMap · CopyOnWriteArrayList · BlockingQueue
+  └── ⚛️  atomic ──────────  AtomicInteger · AtomicReference · CAS · ABA · LongAdder
 ```
 
 ---
@@ -75,7 +75,18 @@ A **structured, multi-module Java learning repository** built for developers who
   ├── 🌊 stream additions ─────  takeWhile · dropWhile · iterate(predicate) · ofNullable
   ├── 🎁 optional additions ───  ifPresentOrElse · or · Optional.stream
   ├── 🔧 interface private ────  private methods · private static methods
-  └── ⚙️  process api ──────────  ProcessHandle · pid · info · allProcesses · onExit
+  └── ⚙️  process api ─────────  ProcessHandle · pid · info · allProcesses · onExit
+```
+
+---
+
+## ☕ Module 5 — Java 10 ✅
+```
+  java-10/
+  │
+  ├── 🔠 var ──────────────────  Type inference · rules · limits · concrete vs interface
+  ├── 🎁 Optional ─────────────  orElseThrow() no-arg · vs get()
+  └── 📋 Unmodifiable ─────────  toUnmodifiableList/Set/Map · copyOf · defensive copies
 ```
 
 ---
@@ -164,8 +175,8 @@ internals, production tradeoffs, and design decisions.
 | ⚡ Java 8 Features | ✅ Complete | Lambdas · Streams · Optionals · Method Refs · Functional Interfaces · CompletableFuture · DateTime · Default Methods |
 | 🔒 Java Concurrency | ✅ Complete | Threads · Locks · Executors · Concurrent Collections · Atomic · Fork/Join |
 | ☕ Java 9                  | ✅ Complete | Collection factories · Stream additions · Optional additions · Interface private methods |
-| ☕ Java 10                 | 🚧 Next     | var · Local variable type inference |
-| ☕ Java 11                 | 📅 Planned  | String methods · Files · HttpClient |
+| ☕ Java 10                 | ✅ Complete     | var · Local variable type inference |
+| ☕ Java 11                 | 🚧 Next  | String methods · Files · HttpClient |
 | ☕ Java 12-14              | 📅 Planned  | Switch expressions · Text blocks |
 | ☕ Java 15-16              | 📅 Planned  | Records · Sealed classes (preview) |
 | ☕ Java 17                 | 📅 Planned  | Records · Sealed classes · Pattern matching (LTS) |
