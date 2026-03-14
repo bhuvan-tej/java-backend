@@ -18,6 +18,7 @@
         <module>java-8</module>
         <module>concurrency</module>
         <module>java-9</module>
+        <module>java-10</module>
     </modules>
 
     <properties>

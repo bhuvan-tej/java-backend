@@ -24,3 +24,4 @@ collections-framework/**/.gitignore
 java-8/**/.gitignore
 concurrency/**/.gitignore
 java-9/**/.gitignore
+java-10/**/.gitignore
