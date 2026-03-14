@@ -67,6 +67,19 @@ A **structured, multi-module Java learning repository** built for developers who
 
 ---
 
+## ☕ Module 4 — Java 9 ✅
+```
+  java-9/
+  │
+  ├── 🏭 collection factories ─  List.of · Set.of · Map.of · Map.ofEntries · copyOf
+  ├── 🌊 stream additions ─────  takeWhile · dropWhile · iterate(predicate) · ofNullable
+  ├── 🎁 optional additions ───  ifPresentOrElse · or · Optional.stream
+  ├── 🔧 interface private ────  private methods · private static methods
+  └── ⚙️  process api ──────────  ProcessHandle · pid · info · allProcesses · onExit
+```
+
+---
+
 Each topic folder contains:
 ```
   <topic>/
@@ -106,6 +119,41 @@ Each module has a dedicated `INTERVIEW_QUESTIONS.md` with questions
 **targeted as we gain Java experience** — not definitions, but deep
 internals, production tradeoffs, and design decisions.
 
+**Collections topics:**
+- HashMap internals — treeification, load factor, power-of-2 capacity
+- ConcurrentHashMap vs synchronizedMap vs Hashtable
+- hashCode + equals contract and what breaks silently when violated
+- Fail-fast vs fail-safe — how `modCount` works under the hood
+- LRU Cache design · TimSort internals · Thread safety tradeoffs
+
+**Java 8 topics:**
+- Lambda vs anonymous class at JVM level — invokedynamic, singleton non-capturing
+- Stream lazy evaluation — vertical processing, short-circuit optimisation
+- `thenApply` vs `thenCompose` — the flatMap parallel for CompletableFuture
+- `orElse` vs `orElseGet` — why eager evaluation is a hidden performance trap
+- Diamond problem resolution — `InterfaceName.super.method()` syntax
+- `DateTimeFormatter` thread safety vs `SimpleDateFormat`
+- Parallel stream pitfalls — commonPool starvation, shared mutable state
+
+**Concurrency topics:**
+- Race conditions, happens-before, synchronized vs volatile
+- Deadlock — four conditions, consistent lock ordering, tryLock fix
+- ReentrantLock vs synchronized, ReadWriteLock, StampedLock optimistic read
+- Thread pool sizing — CPU-bound vs IO-bound
+- ForkJoinPool work stealing, why not to block in common pool
+- CAS, ABA problem, LongAdder vs AtomicLong under contention
+
+**Java 9 topics:**
+- `List.of` vs `Arrays.asList` — mutability, nulls, backing array
+- `takeWhile` vs `filter` — order dependency, prefix semantics
+- `var` — type inference rules, where it cannot be used
+- `String` methods — `isBlank`, `strip`, `lines`, `repeat` (Java 11)
+- `HttpClient` — async vs sync, Java 11 replacement for `HttpURLConnection`
+- Records — immutability, canonical constructor, when to use vs regular class
+- Sealed classes — exhaustive pattern matching, permitted subtypes
+- Virtual threads — carrier threads, platform vs virtual, when to use
+- Pattern matching `switch` — exhaustiveness, guards, type patterns
+
 ---
 
 ## 🛤️ Progress
@@ -115,7 +163,13 @@ internals, production tradeoffs, and design decisions.
 | 📦 Collections Framework | ✅ Complete | Lists · Set · Map · Queue · Comparable · Iterator · Utils · Real World |
 | ⚡ Java 8 Features | ✅ Complete | Lambdas · Streams · Optionals · Method Refs · Functional Interfaces · CompletableFuture · DateTime · Default Methods |
 | 🔒 Java Concurrency | ✅ Complete | Threads · Locks · Executors · Concurrent Collections · Atomic · Fork/Join |
-| ☕ Java Versions (9→21) | 🚧 In Progress | Java 9 · 10 · 11 · 12-14 · 15-16 · 17 · 21 |
+| ☕ Java 9                  | ✅ Complete | Collection factories · Stream additions · Optional additions · Interface private methods |
+| ☕ Java 10                 | 🚧 Next     | var · Local variable type inference |
+| ☕ Java 11                 | 📅 Planned  | String methods · Files · HttpClient |
+| ☕ Java 12-14              | 📅 Planned  | Switch expressions · Text blocks |
+| ☕ Java 15-16              | 📅 Planned  | Records · Sealed classes (preview) |
+| ☕ Java 17                 | 📅 Planned  | Records · Sealed classes · Pattern matching (LTS) |
+| ☕ Java 21                 | 📅 Planned  | Virtual threads · Pattern matching switch · Sequenced collections (LTS) |
 | 🎨 Design Patterns | 📅 Planned | Creational · Structural · Behavioural with real Spring examples        |
 
 ---
