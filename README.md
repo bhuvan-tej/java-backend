@@ -129,6 +129,20 @@ A **structured, multi-module Java learning repository** built for developers who
 
 ---
 
+## ☕ Module 9 — Java 17 ✅ (LTS)
+```
+  java-17/
+  │
+  ├── 🔒 sealed stable ────────  HTTP response hierarchy · nested records · default methods
+  ├── 📦 records stable ───────  wither pattern · generic records · Comparable · nested records
+  ├── 🔍 pattern stable ───────  guards · negation · sealed dispatch · combined patterns
+  ├── 🔐 encapsulation ────────  JDK internals · --add-opens · migration impact
+  ├── 🎲 RandomGenerator ──────  unified interface · algorithms · factory · streams
+  └── 📋 LTS context ──────────  what stabilised · migration checklist · Spring Boot 3.x
+```
+
+---
+
 Each topic folder contains:
 ```
   <topic>/
@@ -224,6 +238,14 @@ internals, production tradeoffs, and design decisions.
 - Stream.toList() vs collect(toList()) — mutability, null handling
 - Sealed + pattern matching — algebraic data types, domain modeling
 
+**Java 17 topics:**
+- LTS meaning — enterprise adoption, Spring Boot 3.x requirement
+- Wither pattern for records — immutable update
+- RandomGenerator API — unified interface, algorithm selection
+- Strong encapsulation — what broke migrating from Java 11, --add-opens fix
+- sealed vs final — controlled vs no extension
+- Java 17 vs Java 11 — migration decision
+
 ---
 
 ## 🛤️ Progress
@@ -238,8 +260,8 @@ internals, production tradeoffs, and design decisions.
 | ☕ Java 11                 | ✅ Complete  | String methods · Files · HttpClient |
 | ☕ Java 12-14              | ✅ Complete | Switch expressions · Text blocks |
 | ☕ Java 15-16              | ✅ Complete  | Records · Sealed classes (preview) |
-| ☕ Java 17                 | 🚧 Next  | Records · Sealed classes · Pattern matching (LTS) |
-| ☕ Java 21                 | 📅 Planned  | Virtual threads · Pattern matching switch · Sequenced collections (LTS) |
+| ☕ Java 17                 | ✅ Complete  | Records · Sealed classes · Pattern matching (LTS) |
+| ☕ Java 21                 | 🚧 Next  | Virtual threads · Pattern matching switch · Sequenced collections (LTS) |
 | 🎨 Design Patterns | 📅 Planned | Creational · Structural · Behavioural with real Spring examples        |
 
 ---
