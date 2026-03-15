@@ -105,7 +105,7 @@ A **structured, multi-module Java learning repository** built for developers who
 
 ---
 
-## ☕ Module 6 — Java 12 to 14 ✅
+## ☕ Module 7 — Java 12 to 14 ✅
 ```
   java-12-14/
   │
@@ -115,6 +115,19 @@ A **structured, multi-module Java learning repository** built for developers who
   ├── 🔍 pattern instanceof ─  bind variable · scope · in equals()
   └── 💥 helpful npe ────────  precise null messages · chained calls
 ```
+
+---
+
+## ☕ Module 8 — Java 15-16 ✅
+```
+  java-15-16/
+  │
+  ├── 📦 Records ──────────────  declaration · compact constructor · custom methods · interfaces · DTOs
+  ├── 🔒 SealedClasses ────────  sealed · permits · final · non-sealed · sealed interfaces · Result type
+  └── 🔧 MiscFeatures ─────────  Stream.toList() · String.formatted() · pattern matching stable
+```
+
+---
 
 Each topic folder contains:
 ```
@@ -204,6 +217,13 @@ internals, production tradeoffs, and design decisions.
 - Pattern matching instanceof — scope rules, vs explicit cast
 - Helpful NPEs — what changed, chained call debugging
 
+**Java 15-16 topics:**
+- Records — what compiler generates, compact constructor, vs immutable class
+- Sealed classes — permits, final/sealed/non-sealed subtypes, exhaustive dispatch
+- Records vs regular class — constraints, transparency, when to use each
+- Stream.toList() vs collect(toList()) — mutability, null handling
+- Sealed + pattern matching — algebraic data types, domain modeling
+
 ---
 
 ## 🛤️ Progress
@@ -217,8 +237,8 @@ internals, production tradeoffs, and design decisions.
 | ☕ Java 10                 | ✅ Complete     | var · Local variable type inference |
 | ☕ Java 11                 | ✅ Complete  | String methods · Files · HttpClient |
 | ☕ Java 12-14              | ✅ Complete | Switch expressions · Text blocks |
-| ☕ Java 15-16              | 🚧 Next  | Records · Sealed classes (preview) |
-| ☕ Java 17                 | 📅 Planned  | Records · Sealed classes · Pattern matching (LTS) |
+| ☕ Java 15-16              | ✅ Complete  | Records · Sealed classes (preview) |
+| ☕ Java 17                 | 🚧 Next  | Records · Sealed classes · Pattern matching (LTS) |
 | ☕ Java 21                 | 📅 Planned  | Virtual threads · Pattern matching switch · Sequenced collections (LTS) |
 | 🎨 Design Patterns | 📅 Planned | Creational · Structural · Behavioural with real Spring examples        |
 
