@@ -91,6 +91,31 @@ A **structured, multi-module Java learning repository** built for developers who
 
 ---
 
+## ☕ Module 6 — Java 11 ✅ (LTS)
+```
+  java-11/
+  │
+  ├── 🔤 strings ──────────  isBlank · strip · stripLeading · stripTrailing · lines · repeat
+  ├── 📁 files ────────────  Files.readString · Files.writeString
+  ├── 🔍 predicate ────────  Predicate.not · method reference negation
+  ├── 🔠 var in lambdas ───  var params · annotation support
+  ├── 📋 toArray ──────────  toArray(String[]::new)
+  └── 🌐 httpclient ───────  sync · async · POST · parallel · headers · timeout
+```
+
+---
+
+## ☕ Module 6 — Java 12 to 14 ✅
+```
+  java-12-14/
+  │
+  ├── 🔀 switch expressions ─  arrow syntax · yield · exhaustiveness · enum switch
+  ├── 📝 text blocks ────────  multiline strings · indentation · \s · line continuation
+  ├── 🔤 string additions ───  indent() · transform() · formatted()
+  ├── 🔍 pattern instanceof ─  bind variable · scope · in equals()
+  └── 💥 helpful npe ────────  precise null messages · chained calls
+```
+
 Each topic folder contains:
 ```
   <topic>/
@@ -165,6 +190,20 @@ internals, production tradeoffs, and design decisions.
 - Virtual threads — carrier threads, platform vs virtual, when to use
 - Pattern matching `switch` — exhaustiveness, guards, type patterns
 
+**Java 11 topics:**
+- strip() vs trim() — Unicode whitespace handling
+- lines() vs split("\\n") — line ending handling, Stream vs array
+- HttpClient vs HttpURLConnection — async, HTTP/2, thread safety
+- Predicate.not() — why it was needed, method reference negation
+- var in lambda parameters — annotations, mixing rules
+
+**Java 12-14 topics:**
+- Switch statement vs switch expression — fall-through, exhaustiveness, yield
+- yield vs return in switch blocks
+- Text block indentation — how stripping works, closing """ position
+- Pattern matching instanceof — scope rules, vs explicit cast
+- Helpful NPEs — what changed, chained call debugging
+
 ---
 
 ## 🛤️ Progress
@@ -176,9 +215,9 @@ internals, production tradeoffs, and design decisions.
 | 🔒 Java Concurrency | ✅ Complete | Threads · Locks · Executors · Concurrent Collections · Atomic · Fork/Join |
 | ☕ Java 9                  | ✅ Complete | Collection factories · Stream additions · Optional additions · Interface private methods |
 | ☕ Java 10                 | ✅ Complete     | var · Local variable type inference |
-| ☕ Java 11                 | 🚧 Next  | String methods · Files · HttpClient |
-| ☕ Java 12-14              | 📅 Planned  | Switch expressions · Text blocks |
-| ☕ Java 15-16              | 📅 Planned  | Records · Sealed classes (preview) |
+| ☕ Java 11                 | ✅ Complete  | String methods · Files · HttpClient |
+| ☕ Java 12-14              | ✅ Complete | Switch expressions · Text blocks |
+| ☕ Java 15-16              | 🚧 Next  | Records · Sealed classes (preview) |
 | ☕ Java 17                 | 📅 Planned  | Records · Sealed classes · Pattern matching (LTS) |
 | ☕ Java 21                 | 📅 Planned  | Virtual threads · Pattern matching switch · Sequenced collections (LTS) |
 | 🎨 Design Patterns | 📅 Planned | Creational · Structural · Behavioural with real Spring examples        |
