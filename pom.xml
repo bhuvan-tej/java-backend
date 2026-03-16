@@ -23,6 +23,7 @@
         <module>java-12-14</module>
         <module>java-15-16</module>
         <module>java-17</module>
+        <module>java-21</module>
     </modules>
 
     <properties>
