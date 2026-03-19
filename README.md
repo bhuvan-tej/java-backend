@@ -250,19 +250,20 @@ internals, production tradeoffs, and design decisions.
 
 ## 🛤️ Progress
 
-| Module | Status | Topics                                                                 |
-|--------|--------|------------------------------------------------------------------------|
-| 📦 Collections Framework | ✅ Complete | Lists · Set · Map · Queue · Comparable · Iterator · Utils · Real World |
-| ⚡ Java 8 Features | ✅ Complete | Lambdas · Streams · Optionals · Method Refs · Functional Interfaces · CompletableFuture · DateTime · Default Methods |
-| 🔒 Java Concurrency | ✅ Complete | Threads · Locks · Executors · Concurrent Collections · Atomic · Fork/Join |
-| ☕ Java 9                  | ✅ Complete | Collection factories · Stream additions · Optional additions · Interface private methods |
-| ☕ Java 10                 | ✅ Complete     | var · Local variable type inference |
-| ☕ Java 11                 | ✅ Complete  | String methods · Files · HttpClient |
-| ☕ Java 12-14              | ✅ Complete | Switch expressions · Text blocks |
-| ☕ Java 15-16              | ✅ Complete  | Records · Sealed classes (preview) |
-| ☕ Java 17                 | ✅ Complete  | Records · Sealed classes · Pattern matching (LTS) |
-| ☕ Java 21                 | ✅ Complete  | Virtual threads · Pattern matching switch · Sequenced collections (LTS) |
-| 🎨 Design Patterns | 📅 Planned | Creational · Structural · Behavioural with real Spring examples        |
+| Module                   | Status        | Topics                                                                                                               |
+|--------------------------|---------------|----------------------------------------------------------------------------------------------------------------------|
+| 📦 Collections Framework | ✅ Complete    | Lists · Set · Map · Queue · Comparable · Iterator · Utils · Real World                                               |
+| ⚡ Java 8 Features        | ✅ Complete    | Lambdas · Streams · Optionals · Method Refs · Functional Interfaces · CompletableFuture · DateTime · Default Methods |
+| 🔒 Java Concurrency      | ✅ Complete    | Threads · Locks · Executors · Concurrent Collections · Atomic · Fork/Join                                            |
+| ☕ Java 9                 | ✅ Complete    | Collection factories · Stream additions · Optional additions · Interface private methods                             |
+| ☕ Java 10                | ✅ Complete    | var · Local variable type inference                                                                                  |
+| ☕ Java 11                | ✅ Complete    | String methods · Files · HttpClient                                                                                  |
+| ☕ Java 12-14             | ✅ Complete    | Switch expressions · Text blocks                                                                                     |
+| ☕ Java 15-16             | ✅ Complete    | Records · Sealed classes (preview)                                                                                   |
+| ☕ Java 17                | ✅ Complete    | Records · Sealed classes · Pattern matching (LTS)                                                                    |
+| ☕ Java 21                | ✅ Complete    | Virtual threads · Pattern matching switch · Sequenced collections (LTS)                                              |
+| 🎨 DSA                    | 🚧 In Progess | Arrays · Strings · many more                                                                                         |
+| 🎨 Design Patterns       | 📅 Planned    | Creational · Structural · Behavioural with real Spring examples                                                      |
 
 ---
 
