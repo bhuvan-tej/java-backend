@@ -4,11 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ============================================================
  *  PROBLEM: Two Sum
- * ============================================================
  *
- *  QUESTION (as a ThoughtWorks interviewer would ask):
+ *  QUESTION
  *  "Given an array of integers and a target value, return the
  *   indices of the two numbers that add up to the target.
  *   Assume exactly one solution exists. Can you do better than O(n²)?"
@@ -17,9 +15,7 @@ import java.util.Map;
  *    Input : nums = [2, 7, 11, 15], target = 9
  *    Output: [0, 1]  → because nums[0] + nums[1] = 2 + 7 = 9
  *
- * ============================================================
  *  KEY INSIGHT (this is what interviewers want to hear):
- * ============================================================
  *
  *  Instead of checking every pair (slow), ask yourself:
  *  "For each number I see, what is its COMPLEMENT to reach the target?"
@@ -42,9 +38,7 @@ import java.util.Map;
  *  │  After step 2:  FOUND! complement 2 at 0  │
  *  └────────────────────────────────────────────┘
  *
- * ============================================================
  *  APPROACHES — TIME & SPACE TRADEOFFS
- * ============================================================
  *
  *  Approach 1 - Brute Force (nested loops):
  *    Time:  O(n²) — check every pair
