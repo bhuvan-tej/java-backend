@@ -262,8 +262,6 @@ internals, production tradeoffs, and design decisions.
 | ☕ Java 15-16             | ✅ Complete    | Records · Sealed classes (preview)                                                                                   |
 | ☕ Java 17                | ✅ Complete    | Records · Sealed classes · Pattern matching (LTS)                                                                    |
 | ☕ Java 21                | ✅ Complete    | Virtual threads · Pattern matching switch · Sequenced collections (LTS)                                              |
-| 🎨 DSA                    | 🚧 In Progess | Arrays · Strings · many more                                                                                         |
-| 🎨 Design Patterns       | 📅 Planned    | Creational · Structural · Behavioural with real Spring examples                                                      |
 
 ---
 
